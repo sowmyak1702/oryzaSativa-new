@@ -3,11 +3,16 @@ import pickle
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 import pandas as pd
+import joblib
 
 ## import labelencoder as le
 app=Flask(__name__)
-submodel=pickle.load(open("subpoppred.pkl","rb"))
-heimodel=pickle.load(open("predheight.pkl","rb"))
+# submodel=pickle.load(open("subpoppred.pkl","rb"))
+# heimodel=pickle.load(open("predheight.pkl","rb"))
+# using joblib
+submodel1=joblib.load("subpoppred.pkl")
+heimodel1=joblib.load("predheight.pkl")
+
 pv=[]
 
 
