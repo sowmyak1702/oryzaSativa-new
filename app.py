@@ -39,10 +39,10 @@ def predict():
             one_hot1[0, i*len(nucleotides) + index] = 1
 
     # Perform the prediction using the trained model
-        subpop1 = submodel.predict(one_hot1)
+        subpop1 = submodel1.predict(one_hot1)
         subpop = le.inverse_transform(subpop1)[0]
         inp=np.concatenate((one_hot1,subpop1.reshape(-1,1)),axis=1)
-        h=heimodel.predict(inp)
+        h=heimodel1.predict(inp)
 
   
     list1=[]
